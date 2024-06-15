@@ -24,10 +24,13 @@ It involves specifying the desired style, tone, or genre in the prompt to shape 
 first asks an LLM to rewrite
 the prompt and remove any information unrelated to the question therein. Then, it passes this new prompt into an LLM to retrieve a final response.
 
-### SimToM
+### [SimToM](https://github.com/nikhilsharma26500/instructor_docs/blob/main/zero_shot/sim_to_m.py)
 It deals with complicated questions which involve multiple people or objects. Given the question, it attempts to establish the set of facts one person knows, then answer the question based only on those facts. This is a two prompt process and can help eliminate the effect of irrelevant information in the prompt.
 
-### RaR
+### [Rephrase and Respond (RaR)](https://github.com/nikhilsharma26500/instructor_docs/blob/main/zero_shot/rephrase_and_respond.py)
+It instructs the LLM to rephrase and expand the question before generating the final answer. For example,
+it might add the following phrase to the question: "Rephrase and expand the question, and respond". This could all be done in a single pass or the new question could be passed to the LLM separately. RaR has demonstrated improvements on multiple benchmarks.
+
 ### RE2
 ### Self-Ask
 

@@ -9,8 +9,6 @@ import json
 load_dotenv(find_dotenv())
 
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
-# Step 1: Define the Pydantic Models
-
 
 class AnalyzedResponse(BaseModel):
     summary: str

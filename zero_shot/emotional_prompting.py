@@ -40,4 +40,3 @@ ar: AnalyzedResponse = client.chat.completions.create(
 )
 
 print(json.dumps(ar.dict(), indent=2))
-

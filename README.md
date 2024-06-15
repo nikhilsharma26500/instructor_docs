@@ -34,7 +34,8 @@ it might add the following phrase to the question: "Rephrase and expand the ques
 ### [Re-reading (RE2)](https://github.com/nikhilsharma26500/instructor_docs/blob/main/zero_shot/re_reading.py)
 It adds the phrase "Read the question again:" to the prompt in addition to repeating the question. Although this is such a simple technique, it has shown improvement in reasoning benchmarks, especially with complex questions.
 
-### Self-Ask
+### [Self-Ask](https://github.com/nikhilsharma26500/instructor_docs/blob/main/zero_shot/self_ask.py)
+It prompts LLMs to first decide if they need to ask follow up questions for a given prompt. If so, the LLM generates these questions, then answers them and finally answers the original question.
 
 ## Few Shot Prompting
 

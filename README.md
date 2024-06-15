@@ -31,7 +31,9 @@ It deals with complicated questions which involve multiple people or objects. Gi
 It instructs the LLM to rephrase and expand the question before generating the final answer. For example,
 it might add the following phrase to the question: "Rephrase and expand the question, and respond". This could all be done in a single pass or the new question could be passed to the LLM separately. RaR has demonstrated improvements on multiple benchmarks.
 
-### RE2
+### [Re-reading (RE2)](https://github.com/nikhilsharma26500/instructor_docs/blob/main/zero_shot/re_reading.py)
+It adds the phrase "Read the question again:" to the prompt in addition to repeating the question. Although this is such a simple technique, it has shown improvement in reasoning benchmarks, especially with complex questions.
+
 ### Self-Ask
 
 ## Few Shot Prompting

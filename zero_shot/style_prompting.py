@@ -14,6 +14,7 @@ client = instructor.patch(OpenAI(api_key=OPENAI_API_KEY))
 class StylePrompt(BaseModel):
     style: str
     text: str
+    response: str
 
 style = "Franz Kafka peom"
 input_text = "What is the purpose of life?"

@@ -21,8 +21,7 @@ It also known as persona prompting, assigns a specific role to the GenAI in the 
 It involves specifying the desired style, tone, or genre in the prompt to shape the output of a GenAI. A similar effect can be achieved using role prompting.
 
 ### [System 2 Attention (S2A)](https://github.com/nikhilsharma26500/instructor_docs/blob/main/zero_shot/system_2_attention.py)
-first asks an LLM to rewrite
-the prompt and remove any information unrelated to the question therein. Then, it passes this new prompt into an LLM to retrieve a final response.
+It first asks an LLM to rewrite the prompt and remove any information unrelated to the question therein. Then, it passes this new prompt into an LLM to retrieve a final response.
 
 ### [SimToM](https://github.com/nikhilsharma26500/instructor_docs/blob/main/zero_shot/sim_to_m.py)
 It deals with complicated questions which involve multiple people or objects. Given the question, it attempts to establish the set of facts one person knows, then answer the question based only on those facts. This is a two prompt process and can help eliminate the effect of irrelevant information in the prompt.

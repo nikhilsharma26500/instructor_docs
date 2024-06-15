@@ -13,7 +13,7 @@ client = instructor.patch(OpenAI(api_key=OPENAI_API_KEY))
 
 class System2Attention(BaseModel):
     system: str
-    prompt: str
+    text: str
     context: str
     question: str
     response: str

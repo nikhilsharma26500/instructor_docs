@@ -12,7 +12,7 @@ OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 client = instructor.patch(OpenAI(api_key=OPENAI_API_KEY))
 
 class SelfAsk(BaseModel):
-    input_text: str
+    text: str
     prompt: str
     self_ask_prompt: str
     response: str

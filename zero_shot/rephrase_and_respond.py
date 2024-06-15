@@ -12,7 +12,7 @@ OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 client = instructor.patch(OpenAI(api_key=OPENAI_API_KEY))
 
 class RephraseAndRespond(BaseModel):
-    input_text: str
+    text: str
     rephrased_text: str
     response: str
     

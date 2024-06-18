@@ -39,6 +39,7 @@ It prompts LLMs to first decide if they need to ask follow up questions for a gi
 ## Few Shot Prompting
 
 ### Example Generation
+#### [Self-Generated In-Context Learning (SG-ICL)]()
 ### Example Ordering
 ### Exemplar Selection
 

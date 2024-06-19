@@ -11,27 +11,21 @@ load_dotenv(find_dotenv())
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 
 class AnalyzedResponse(BaseModel):
-    summary: str
-    key_points: List[str]
-    emotional_tone: str
+    question: str
+    answer: str
 
-input_text = "The project deadline is approaching fast, and the team is feeling anxious about the final presentation."
+input_text = "What is gravity?"
 
-emotion_phrases = [
-        "This is important to my career",
-        "The success of this project affects my job security"
-]
+emotion_prompt = "This is an extremely important topic for my exam"
 
-client = instructor.patch(OpenAI(api_key=OPENAI_API_KEY))
-
-emotional_context = " ".join(emotion_phrases)
+client = instructor.from_openai(OpenAI(api_key=OPENAI_API_KEY))
 
 ar: AnalyzedResponse = client.chat.completions.create(
     model="gpt-4o",
     messages=[
             {
                 "role": "user",
-                "content": f"Analyze the following text considering the emotional context: {input_text}.\nEmotional context: {emotional_context}"
+                "content": f"Explain me: {input_text}.\n {emotion_prompt}"
             }
         ],
     response_model=AnalyzedResponse

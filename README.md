@@ -38,10 +38,18 @@ It prompts LLMs to first decide if they need to ask follow up questions for a gi
 
 ## Few Shot Prompting
 
-### Example Generation
-#### [Self-Generated In-Context Learning (SG-ICL)]()
-### Example Ordering
+### Exemplar Generation
+#### [Self-Generated In-Context Learning (SG-ICL)](https://github.com/nikhilsharma26500/instructor_docs/blob/main/few_shot/example_generation/sg_icl.py)
+It leverages a GenAI to automatically generate exemplars. While better than zeroshot scenarios when training data is unavailable, the generated samples are not as effective as actual data.
+
+### Exemplar Ordering
+
 ### Exemplar Selection
+#### [K Nearest Neighbors (KNN)]()
+is part of a family of algorithms that selects exemplars similar to $D_{x_i}^{\text{test}}$ to boost performance. Although effective, employing KNN during prompt generation may be time and resource intensive.
+
+#### [Vote-K]()
+It is another method to select similar exemplars to the test sample. In one stage, a model proposes useful unlabeled candidate exemplars for an annotator to label. In the second stage, the labeled pool is used for Few-Shot Prompting. Vote-K also ensures that newly added exemplars are sufficiently different than existing ones to increase diversity and representativeness.
 
 ## Thought Generation
 
